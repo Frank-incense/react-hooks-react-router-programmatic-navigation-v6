@@ -1,8 +1,8 @@
-import { NavLink} from "react-router-dom";
+import { NavLink, useOutletContext} from "react-router-dom";
 import "./NavBar.css";
 
-function NavBar() {
-
+function NavBar({context}) {
+  
   return (
     <nav>
       <NavLink
@@ -17,6 +17,7 @@ function NavBar() {
       >
         About
       </NavLink>
+      <button onClick={context}>Logout</button>
     </nav>
   );
 }
